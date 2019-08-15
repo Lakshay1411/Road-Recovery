@@ -18,23 +18,25 @@ include('config.php');
 		<tr>
 			<th>location</th>
 			<th>count</th>
+			<th>status</th>
 			
 		</tr>
 
 		<?php
 
-			$tbl_name="user_info";
-			$sql="SELECT location,count(location) as p_count FROM $tbl_name GROUP BY location ORDER BY p_count desc";
+			$tbl_name="status_info";
+			$sql="SELECT * FROM $tbl_name ORDER BY count desc";
 			$result=mysqli_query($conn,$sql);
 			if($result)
 			{
 				while ($row = mysqli_fetch_array($result)) {
 
-					echo "<tr><td>".$row['location']."</td><td>".$row['p_count']."</td></tr>";
+					echo "<tr><td>".$row['location']."</td><td>".$row['count']."</td><td>".$row['status']."</td></tr>";
 
 					# code...
 				}
 			}
+
 
 		?>
 	</table>
