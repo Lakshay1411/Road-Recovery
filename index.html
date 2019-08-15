@@ -31,7 +31,27 @@
 
 			
     </head>
-	
+	<style>
+        .cap-area{
+	width: 400px ;
+	background-color: #ccc ;
+	border: 10px solid #ddd ;
+	margin: 0 auto ; 
+}
+.capture-btn {
+	display:block;
+	margin:10px;
+	padding: 10px 20px ;
+	background-color: cornflowerblue;
+	color:#fff;
+	text-align: center;
+	text-decoration: none;
+}
+
+#canvas {
+	display: none ;
+}
+    </style>
     <body id="body" data-spy="scroll" data-target=".navbar" data-offset="50">
 	    
 
@@ -49,7 +69,7 @@ Welcome Slider
         -->
 		<h1>Road Recovery System</h1>
 		<p>Click! And Fix!</p>
-		<a data-scroll href="" class="btn btn-transparent">Start Contribution</a>
+		<a data-scroll href="" class="btn btn-transparent" data-toggle="modal" data-target="#myModal" onclick="myFunction()">Start Contribution</a>
 	</div>
 </section>	
 
@@ -388,7 +408,7 @@ Start Our Team
 					
 					<!-- member name & designation -->
 					<div class="member-meta">
-						<h4>Akashdeep</h4>
+						<h4>Akashdeep Kaur</h4>
 						<span>BackEnd Developer</span>
 						<p></p>
 					</div>
@@ -516,15 +536,8 @@ Start Our Team
 		
 		</div> <!-- end row -->
 	</div> <!-- end container -->
-	
-	<!-- Google Map -->
-	<div class="google-map">
-		<div id="map-canvas"></div>
-	</div>	
-	<!-- /Google Map -->
-	
-</section> <!-- end section -->
-	
+
+</section>	
 
 
 		
@@ -585,7 +598,30 @@ Start Our Team
 	    
 		
 		
-		
+		 <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Take a picture</h4>
+        </div>
+        <div class="modal-body""cap-area" "col-md-12" >
+		<center><video id="video" width="80%"></video></center> 
+		<a href="#" id="cap-btn" class="capture-btn">Take Pic</a>
+		<canvas id="canvas" ></canvas>
+		<img  id="photo"  >
+        </div>
+        <div class="modal-footer">
+            <button type="button" class=" btn-default" data-dismiss="modal">Submit</button>
+          <button type="button" class=" btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
 		
 		
 		
@@ -618,6 +654,45 @@ Start Our Team
 		<script type="text/javascript" src="plugins/wow/dist/wow.min.js"></script>
 		<!-- Custom js -->
 		<script type="text/javascript" src="js/script.js"></script>
-		
+        
     </body>
 </html>
+<script>
+    (function myfunction(){
+	video = document.getElementById('video') ;
+	canvas = document.getElementById('canvas') ;
+	context = canvas.getContext('2d') ;
+	
+	// photo is used so that the image can be obtained on the canvas and we can work on it.
+	photo = document.getElementById('photo') ;
+	
+	vendorURL = window.URL ||
+		    window.webkitURL ;
+	
+	//for compatibility with all browsers
+	navigator.getMedia = navigator.getUserMedia ||
+			     navigator.webkitGetUserMedia ||
+			     navigator.mozGetUserMedia ||
+			     navigator.msGetUserMedia ;
+	//for getting image
+	navigator.getMedia({
+		video:true,
+		audio:false
+	}, function(stream) {
+		video.srcObject = stream ;
+		video.play() ;
+	}, function(error){
+		//error.code
+	});
+
+	//for capturing image 
+	document.getElementById('cap-btn').addEventListener('click', function(){
+		context.drawImage(video, 0, 0, 400, 300)
+		
+		//set image source as the snap from camera
+		photo.setAttribute('src', canvas.toDataURL('image'))
+        var btn=document.createElement("anchor");
+        document.getElementById("button").appendChild(btn);
+	});
+})();
+</script>
