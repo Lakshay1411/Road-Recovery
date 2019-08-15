@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html class="no-js"> 
+    <head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        
+        <meta name="author" content="Group2">
+		
+        <title>Road Recovery System</title>
+		
+		<!-- Mobile Specific Meta
+		================================================== -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		<!-- CSS
+		================================================== -->
+		<!-- Fontawesome Icon font -->
+        <link rel="stylesheet" href="plugins/themefisher-font/style.css">
+		<!-- bootstrap.min css -->
+        <link rel="stylesheet" href="plugins/bootstrap/dist/css/bootstrap.min.css">
+		<!-- Animate.css -->
+        <link rel="stylesheet" href="plugins/animate-css/animate.css">
+        <!-- Magnific popup css -->
+        <link rel="stylesheet" href="plugins/magnific-popup/dist/magnific-popup.css">
+		<!-- Slick Carousel -->
+        <link rel="stylesheet" href="plugins/slick-carousel/slick/slick.css">
+        <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">
+		<!-- Main Stylesheet -->
+        <link rel="stylesheet" href="css/style.css">
+
+			
+    </head>
+	<style>
+        .cap-area{
+	width: 400px ;
+	background-color: #ccc ;
+	border: 10px solid #ddd ;
+	margin: 0 auto ; 
+}
+.capture-btn {
+	display:block;
+	margin:10px;
+	padding: 10px 20px ;
+	background-color: cornflowerblue;
+	color:#fff;
+	text-align: center;
+	text-decoration: none;
+}
+#canvas {
+	display: none ;
+}
+    </style>
+    <body id="body" data-spy="scroll" data-target=".navbar" data-offset="50">
+	    
+
+ <!--
+Welcome Slider
+==================================== -->
+
+<section class="hero-area">
+	<div class="block">
+		<!--
+        <div class="video-button">
+			<i class="tf-ion-play"></i>
+		</div>
+        -->
+		<h1>Road Recovery System</h1>
+		<p>Click! And Fix!</p>
+		<a data-scroll href="" class="btn btn-transparent" data-toggle="modal" data-target="#myModal" onclick="myFunction()">Start Contribution</a>
+	</div>
+</section>	
+
+ <!-- 
+  Fixed Navigation
+  ==================================== -->
+    <header id="navigation" class="navbar navigation">
+        <div class="container">
+            <div class="navbar-header">
+              <!-- responsive nav button -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- /responsive nav button -->
+    
+                <!-- logo -->
+                <a class="navbar-brand logo" href="#body">
+                    <!-- <img src="images/logo.png" alt="Website Logo" /> -->
+                    <svg width="40px" height="40px" viewBox="0 0 45 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="Group" transform="translate(2.000000, 2.000000)" stroke="#57CBCC" stroke-width="3">
+                                <ellipse id="Oval" cx="20.5" cy="20" rx="20.5" ry="20"></ellipse>
+                                <path d="M6,7 L33.5,34.5" id="Line-2" stroke-linecap="square"></path>
+                                <path d="M21,20 L34,7" id="Line-3" stroke-linecap="square"></path>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+            <!-- /logo -->
+        </div>
+    
+        <!-- main nav -->
+        <nav class="collapse navbar-collapse navbar-right" role="Navigation">
+            <ul id="nav" class="nav navbar-nav navigation-menu">
+                <li><a data-scroll href="#body">Home</a></li>
+                <li><a data-scroll href="#our_idea">Our Idea</a></li>
+                <li><a data-scroll href="#portfolio">Locations</a></li>
+                <li><a data-scroll href="#our-team">Our Team</a></li>
+                <li><a data-scroll href="#contact-us">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- /main nav -->
+  
+      </div>
+  </header>
+  <!--
+  End Fixed Navigation
+  ==================================== -->
+
+
+
+<!--
+Start Call To Action
+==================================== -->
+<section class="call-to-action section-sm bg-1 overly" id="our_idea">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<h2>Our Idea</h2>
+				<p>We want to bridge the gape between the public how face problems on the road and the government with the help of internet and this website</p>
+					<p>When ever you come across a street, road that need to be repaired or maintained, JUST CLICK A PICTURE AND POST IT ON OUR SITE.</p>
+					<p>The locations with most visits and images from people will be looked into and solution will be provided as soon as possible.</p>
+				<a href="#" class="btn btn-main">Take A Picture</a>
+			</div>
+		</div> 		<!-- End row -->
+	</div>   	<!-- End container -->
+</section>   <!-- End section -->
+
+	
+
+
+
+<!-- Start Portfolio Section
+		=========================================== -->
+		
+		<section class="portfolio section" id="portfolio">
+			<div class="container">
+				<div class="row " >
+					<div class="col-lg-12">
+					
+						<!-- section title -->
+						<div class="title text-center">
+							<h2>Recent <span class="color">Locations</span></h2>
+							<div class="border"></div>
+						</div>
+						<!-- /section title -->
+					</div> <!-- /end col-lg-12 -->
+				</div> <!-- end row -->
+				<!--<div class="row">
+						<div class="col-md-12">
+							<div class="portfolio-filter">
+								<button  type="button" data-filter="all">All</button>
+								<button type="button" data-filter=".photography">Photography</button>
+								<button type="button" data-filter=".design">Design</button>
+								<button type="button" data-filter=".development">Development</button>
+							</div>
+						</div>
+					</div>-->
+					<div class="row portfolio-items-wrapper">
+						<div class="mix col-md-4 design">
+							<div class="portfolio-block">
+								<img class="img-responsive" src="images/portfolio/portfolio-1.jpg" alt="">
+								<div class="caption">
+
+									<a class="search-icon image-popup" data-effect="mfp-with-zoom" href="images/portfolio/portfolio-1.jpg" data-lightbox="image-1">
+										<i class="tf-ion-android-search"></i>
+									</a>
+									<h4><a href="">Location A</a></h4>
+									<p>No. of hits:</p><!--add the no. of hits-->
+								</div>
+							</div>
+						</div>
+						<div class="mix col-md-4 design">
+							<div class="portfolio-block">
+									<img class="img-responsive" src="images/portfolio/portfolio-2.jpg" alt="">
+									<div class="caption">
+										<a class="search-icon image-popup" data-effect="mfp-with-zoom" href="images/portfolio/portfolio-2.jpg" data-lightbox="image-1">
+											<i class="tf-ion-android-search"></i>
+										</a>
+										<h4><a href="">Location B</a></h4>
+										<p>No. of hits:</p><!--add the no. of hits-->
+									</div>
+								</div>
+						</div>
+						<div class="mix col-md-4 design development">
+							<div class="portfolio-block">
+									<img class="img-responsive" src="images/portfolio/portfolio-3.jpg" alt="">
+									<div class="caption">
+										<a class="search-icon image-popup" data-effect="mfp-with-zoom" href="images/portfolio/portfolio-3.jpg" data-lightbox="image-1">
+											<i class="tf-ion-android-search"></i>
+										</a>
+										<h4><a href="">Location C</a></h4>
+										<p>No. of hits:</p><!--add the no. of hits-->
+									</div>
+								</div>
+						</div>
+						<div class="mix col-md-4 photography development">
+							<div class="portfolio-block">
+									<img class="img-responsive" src="images/portfolio/portfolio-4.jpg" alt="">
+									<div class="caption">
+										<a class="search-icon image-popup" data-effect="mfp-with-zoom" href="images/portfolio/portfolio-4.jpg" data-lightbox="image-1">
+											<i class="tf-ion-android-search"></i>
+										</a>
+										<h4><a href="">Location D</a></h4>
+										<p>No. of hits:</p><!--add the no. of hits-->
+									</div>
+								</div>
+						</div>
+						<div class="mix col-md-4 design">
+							<div class="portfolio-block">
+									<img class="img-responsive" src="images/portfolio/portfolio-5.jpg" alt="">
+									<div class="caption">
+										<a class="search-icon image-popup" data-effect="mfp-with-zoom" href="images/portfolio/portfolio-5.jpg" data-lightbox="image-1">
+											<i class="tf-ion-android-search"></i>
+										</a>
+										<h4><a href="">Location E</a></h4>
+										<p>No. of hits:</p><!--add the no. of hits-->
+									</div>
+								</div>
+						</div>
+						<div class="mix col-md-4 photography" >
+							<div class="portfolio-block">
+									<img class="img-responsive" src="images/portfolio/portfolio-6.jpg" alt="">
+									<div class="caption">
+										<a class="search-icon image-popup" data-effect="mfp-with-zoom" href="images/portfolio/portfolio-6.jpg" data-lightbox="image-1">
+											<i class="tf-ion-android-search"></i>
+										</a>
+										<h4><a href="">Location F</a></h4>
+										<p>No. of hits:</p><!--add the no. of hits-->
+									</div>
+								</div>
+						</div>
+															
+					</div>
+						
+
+						
+			</div>	<!-- end container -->
+		</section>   <!-- End section -->
+
+<!--
+Start Counter Section
+==================================== -->
+		
+<section id="counter" class="parallax-section bg-1 section overly">
+	<div class="container">
+		<div class="row">
+		
+			<!-- first count item -->
+			<div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInDown" data-wow-duration="500ms">
+				<div class="counters-item">
+					<i class="tf-ion-android-happy"></i>
+					<span data-speed="3000" data-to="20">20<!-- Add the number--></span>
+					<h3>Problem Solved</h3>
+				</div>
+			</div>
+			<!-- end first count item -->
+		
+			<!-- second count item -->
+			<div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInDown" data-wow-duration="500ms" data-wow-delay="200ms">
+				<div class="counters-item">
+					<i class="tf-ion-archive"></i>
+					<span data-speed="3000" data-to="100">100<!-- Add the number--></span>
+					<h3>People Joined</h3>
+				</div>
+			</div>
+			<!-- end second count item -->
+		
+			<!-- third count item -->
+			<div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInDown" data-wow-duration="500ms" data-wow-delay="400ms">
+				<div class="counters-item">
+					<i class="tf-ion-thumbsup"></i>
+					<span data-speed="3000" data-to="95">95</span>
+					<h3>Positive feedback</h3>
+					
+				</div>
+			</div>
+			<!-- end third count item -->
+			
+			<!-- fourth count item -->
+			<div class="col-md-3 col-sm-6 col-xs-12 text-center wow fadeInDown" data-wow-duration="500ms" data-wow-delay="600ms">
+				<div class="counters-item kill-margin-bottom">
+					<i class="tf-ion-coffee"></i>
+					<span data-speed="3000" data-to="200">200</span>
+					<h3>Cups of Coffee</h3>
+				</div>
+			</div>
+			<!-- end fourth count item -->
+			
+		</div> 		<!-- end row -->
+	</div>   	<!-- end container -->
+</section>   <!-- end section -->
+
+<!-- 
+Start Our Team
+=========================================== -->
+
+<section id="our-team" class="section">
+	<div class="container">
+		<div class="row">
+		
+			<!-- section title -->
+			<div class="title text-center wow fadeInUp" data-wow-duration="500ms">
+				<h2>Our <span class="color">Team</span></h2>
+				<div class="border"></div>
+			</div>
+			<!-- /section title -->
+			
+			<!-- team member -->
+			<div class="col-md-3 col-sm-6 col-xs-12  wow fadeInDown" data-wow-duration="500ms">
+               <div class="team-member">
+					<div class="member-photo">
+						<!-- member photo -->
+						<img class="img-responsive" src="images/team/team-1.jpg" alt="Meghna">
+						<!-- /member photo -->
+						
+						<!-- member social profile -->
+						<div class="mask">
+							<ul class="list-inline">
+								<li><a href="#"><i class="tf-ion-social-facebook"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-twitter"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-linkedin"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-dribbble-outline"></i></a></li>
+							</ul>
+						</div>
+						<!-- /member social profile -->
+					</div>
+					
+					<!-- member name & designation -->
+					<div class="member-meta">
+						<h4>Lakshay Singh</h4>
+						<span>BackEnd Developer</span>
+						<p></p>
+					</div>
+					<!-- /member name & designation -->
+					<!-- /about member -->
+				   
+               </div>
+            </div>
+			<!-- end team member -->
+			
+			<!-- team member -->
+			<div class="col-md-3 col-sm-6 col-xs-12 wow fadeInDown" data-wow-duration="500ms" data-wow-delay="200ms">
+               <div class="team-member">
+					<div class="member-photo">
+						<!-- member photo -->
+						<img class="img-responsive" src="images/team/team-2.jpg" alt="Meghna">
+						<!-- /member photo -->
+						
+						<!-- member social profile -->
+						<div class="mask">
+							<ul class="list-inline">
+								<li><a href="#"><i class="tf-ion-social-facebook"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-twitter"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-linkedin"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-dribbble-outline"></i></a></li>
+							</ul>
+						</div>
+						<!-- /member social profile -->
+					</div>
+					
+					<!-- member name & designation -->
+					<div class="member-meta">
+						<h4>Shriya Wali</h4>
+						<span>Front End Developer</span>
+						<p></p>
+					</div>
+					<!-- /member name & designation -->
+					<!-- /about member -->
+				</div>
+            </div>
+			<!-- end team member -->
+			
+			<!-- team member -->
+			<div class="col-md-3 col-sm-6 col-xs-12 wow fadeInDown" data-wow-duration="500ms" data-wow-delay="400ms">
+               <div class="team-member">
+					<div class="member-photo">
+						<!-- member photo -->
+						<img class="img-responsive" src="images/team/team-3.jpg" alt="Meghna">
+						<!-- /member photo -->
+						
+						<!-- member social profile -->
+						<div class="mask">
+							<ul class="list-inline">
+								<li><a href="#"><i class="tf-ion-social-facebook"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-twitter"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-linkedin"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-dribbble-outline"></i></a></li>
+							</ul>
+						</div>
+						<!-- /member social profile -->
+					</div>
+					
+					<!-- member name & designation -->
+					<div class="member-meta">
+						<h4>Akashdeep Kaur</h4>
+						<span>BackEnd Developer</span>
+						<p></p>
+					</div>
+					<!-- /member name & designation -->
+					<!-- /about member -->
+               </div>
+            </div>
+			<!-- end team member -->
+			
+			<!-- team member -->
+			<div class="col-md-3 col-sm-6 col-xs-12 wow fadeInDown" data-wow-duration="500ms" data-wow-delay="600ms">
+               <div class="team-member">
+					<div class="member-photo">
+						<!-- member photo -->
+						<img class="img-responsive" src="images/team/team-4.jpg" alt="Meghna">
+						<!-- /member photo -->
+						
+						<!-- member social profile -->
+						<div class="mask">
+							<ul class="list-inline">
+								<li><a href="#"><i class="tf-ion-social-facebook"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-twitter"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-linkedin"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-dribbble-outline"></i></a></li>
+							</ul>
+						</div>
+						<!-- /member social profile -->
+					</div>
+					
+					<!-- member name & designation -->
+					<div class="member-meta">
+						<h4>Ayush Bahuguna</h4>
+						<span>Web Developer</span>
+						<p></p>
+					</div>
+					<!-- /member name & designation -->
+					<!-- /about member -->
+               </div>
+            </div>
+			<!-- end team member -->
+			
+		</div>  	<!-- End row -->
+	</div>   	<!-- End container -->
+</section>   <!-- End section -->
+		
+
+
+
+<!-- Srart Contact Us
+=========================================== -->		
+<section id="contact-us" class="contact-us section-bg">
+	<div class="container">
+		<div class="row">
+			
+			<!-- section title -->
+			<div class="title text-center wow fadeIn" data-wow-duration="500ms">
+				<h2>Get In <span class="color">Touch</span></h2>
+				<div class="border"></div>
+			</div>
+			<!-- /section title -->
+			
+			<!-- Contact Details -->
+			<div class="contact-info col-md-6 wow fadeInUp" data-wow-duration="500ms">
+				<h3>Contact Details</h3>
+				<p>In case of any problem contact with the under given numbers.</p>
+				<div class="contact-details">
+					<div class="con-info clearfix">
+						<i class="tf-map-pin"></i>
+						<span>Chandigarh University, Gharua, Punjab, India</span>
+					</div>
+					
+					<div class="con-info clearfix">
+						<i class="tf-ion-ios-telephone-outline"></i>
+						<span>Phone: +880-31-000-000</span>
+					</div>
+					
+					<div class="con-info clearfix">
+						<i class="tf-ion-iphone"></i>
+						<span>Fax: +880-31-000-000</span>
+					</div>
+					
+					<div class="con-info clearfix">
+						<i class="tf-ion-ios-email-outline"></i>
+						<span>Email: hello@gmail.com.com</span>
+					</div>
+				</div>
+			</div>
+			<!-- / End Contact Details -->
+				
+			<!-- Contact Form -->
+			<div class="contact-form col-md-6 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
+				<form id="contact-form" method="post" action="sendmail.php" role="form">
+				
+					<div class="form-group">
+						<input type="text" placeholder="Your Name" class="form-control" name="name" id="name">
+					</div>
+					
+					<div class="form-group">
+						<input type="email" placeholder="Your Email" class="form-control" name="email" id="email">
+					</div>
+					
+					<div class="form-group">
+						<input type="text" placeholder="Subject" class="form-control" name="subject" id="subject">
+					</div>
+					
+					<div class="form-group">
+						<textarea rows="6" placeholder="Message" class="form-control" name="message" id="message"></textarea>	
+					</div>
+					
+					<div id="mail-success" class="success">
+						Thank you. The Mailman is on His Way :)
+					</div>
+					
+					<div id="mail-fail" class="error">
+						Sorry, don't know what happened. Try later :(
+					</div>
+					
+					<div id="cf-submit">
+						<input type="submit" id="contact-submit" class="btn btn-transparent" value="Submit">
+					</div>						
+					
+				</form>
+			</div>
+			<!-- ./End Contact Form -->
+		
+		</div> <!-- end row -->
+	</div> <!-- end container -->
+
+</section>	
+
+
+		
+		
+		<!-- end Contact Area
+		========================================== -->
+		
+		<footer id="footer" class="bg-one">
+			<div class="container">
+			    <div class="row wow fadeInUp" data-wow-duration="500ms">
+					<div class="col-lg-12">
+						
+						<!-- Footer Social Links -->
+						<div class="social-icon">
+							<ul class="list-inline">
+								<li><a href="#"><i class="tf-ion-social-facebook"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-twitter"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-google-outline"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-youtube"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-linkedin"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-dribbble-outline"></i></a></li>
+								<li><a href="#"><i class="tf-ion-social-pinterest-outline"></i></a></li>
+							</ul>
+						</div>
+						<!--/. End Footer Social Links -->
+
+						<!-- copyright -->
+						<div class="copyright text-center">
+							<a href="index.html">
+								<!-- <img src="images/logo-meghna.png" alt="Meghna" />  -->
+								<svg width="40px" height="40px" viewBox="0 0 45 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		                        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		                            <g id="Group" transform="translate(2.000000, 2.000000)" stroke="#57CBCC" stroke-width="3">
+		                                <ellipse id="Oval" cx="20.5" cy="20" rx="20.5" ry="20"></ellipse>
+		                                <path d="M6,7 L33.5,34.5" id="Line-2" stroke-linecap="square"></path>
+		                                <path d="M21,20 L34,7" id="Line-3" stroke-linecap="square"></path>
+		                            </g>
+		                        </g>
+		                    </svg>
+							</a>
+							<br />
+							
+							<p>Design And Developed by <a href="http://www.themefisher.com"> TEKSystems Group2</a>. Copyright &copy; <script>document.write(new Date().getFullYear())</script>. All Rights Reserved.
+								
+							</p>
+						</div>
+						<!-- /copyright -->
+						
+					</div> <!-- end col lg 12 -->
+				</div> <!-- end row -->
+			</div> <!-- end container -->
+		</footer> <!-- end footer -->
+
+		<div id="scroll-up">
+			up
+		</div>
+		
+	    
+		
+		
+		 <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Take a picture</h4>
+        </div>
+        <div class="modal-body""cap-area" "col-md-12" >
+		<center><video id="video" width="80%"></video></center> 
+		<a href="#" id="cap-btn" class="capture-btn">Take Pic</a>
+		<canvas id="canvas" ></canvas>
+		<img  name="photo" id="photo"  >
+        </div>
+        <div class="modal-footer">
+            <button type="button" class=" btn-default" data-dismiss="modal">Submit</button>
+          <button type="button" class=" btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+		
+		
+		
+		
+
+
+		<!-- 
+		Essential Scripts
+		=====================================-->
+		
+		<!-- Main jQuery -->
+		<script type="text/javascript" src="plugins/jquery/dist/jquery.min.js"></script>
+		<!-- Bootstrap 3.1 -->
+		<script type="text/javascript" src="plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+		<!-- Slick Carousel -->
+		<script type="text/javascript" src="plugins/slick-carousel/slick/slick.min.js"></script>
+		<!-- Portfolio Filtering -->
+		<script type="text/javascript" src="plugins/mixitup/dist/mixitup.min.js"></script>
+		<!-- Smooth Scroll -->
+		<script type="text/javascript" src="plugins/smooth-scroll/dist/js/smooth-scroll.min.js"></script>
+		<!-- Magnific popup -->
+		<script type="text/javascript" src="plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+		<!-- Google Map API -->
+		<script type="text/javascript"  src="http://maps.google.com/maps/api/js?sensor=false"></script>
+		<!-- Sticky Nav -->
+		<script type="text/javascript" src="plugins/Sticky/jquery.sticky.js"></script>
+		<!-- Number Counter Script -->
+		<script type="text/javascript" src="plugins/count-to/jquery.countTo.js"></script>
+		<!-- wow.min Script -->
+		<script type="text/javascript" src="plugins/wow/dist/wow.min.js"></script>
+		<!-- Custom js -->
+		<script type="text/javascript" src="js/script.js"></script>
+        
+    </body>
+</html>
+<script>
+    (function myfunction(){
+	video = document.getElementById('video') ;
+	canvas = document.getElementById('canvas') ;
+	context = canvas.getContext('2d') ;
+	
+	// photo is used so that the image can be obtained on the canvas and we can work on it.
+	photo = document.getElementById('photo') ;
+	
+	vendorURL = window.URL ||
+		    window.webkitURL ;
+	
+	//for compatibility with all browsers
+	navigator.getMedia = navigator.getUserMedia ||
+			     navigator.webkitGetUserMedia ||
+			     navigator.mozGetUserMedia ||
+			     navigator.msGetUserMedia ;
+	//for getting image
+	navigator.getMedia({
+		video:true,
+		audio:false
+	}, function(stream) {
+		video.srcObject = stream ;
+		video.play() ;
+	}, function(error){
+		//error.code
+	});
+	//for capturing image 
+	document.getElementById('cap-btn').addEventListener('click', function(){
+		context.drawImage(video, 0, 0, 400, 300)
+		
+		//set image source as the snap from camera
+		photo.setAttribute('src', canvas.toDataURL('image'))
+        var btn=document.createElement("anchor");
+        document.getElementById("button").appendChild(btn);
+	});
+})();
+</script>
