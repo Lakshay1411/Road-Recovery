@@ -1,0 +1,86 @@
+{% load staticfiles %}
+
+
+<html>
+<head>
+<Title></Title>
+</head>
+
+<body>
+<!-- Stream video via webcam -->
+<div class="video-wrap">
+    <video id="video" playsinline autoplay width="640" height="480"></video>
+</div>
+
+<!-- Trigger canvas web API -->
+<div class="controller">
+    <button id="snap">Capture</button>
+</div>
+
+<!-- Webcam video snapshot -->
+<canvas id="canvas" width="640" height="480"></canvas>
+<table>
+        <tr>
+            <td>
+                <input id="name" type="text" name="usrname" placeholder="Name" />
+            </td>
+            <td rowspan="3">
+                <button name="next" class="action-button" id="summ" style="height:90px;">Submit</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input id="num" type="text" name="num" placeholder="Mobile Number" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input id="loc" type="text" name="loc" placeholder="Location" />
+            </td>
+        </tr>
+    </table>
+
+</body>
+<script>
+'use strict';
+
+const video = document.getElementById('video');
+const canvas = document.getElementById('canvas');
+const snap = document.getElementById("snap");
+const errorMsgElement = document.querySelector('span#errorMsg');
+
+const constraints = {
+  audio: true,
+  video: {
+    width: 1280, height: 720
+  }
+};
+
+// Access webcam
+async function init() {
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia(constraints);
+    handleSuccess(stream);
+  } catch (e) {
+    errorMsgElement.innerHTML = `navigator.getUserMedia error:${e.toString()}`;
+  }
+}
+
+// Success
+function handleSuccess(stream) {
+  window.stream = stream;
+  video.srcObject = stream;
+}
+
+// Load init
+init();
+
+// Draw image
+var context = canvas.getContext('2d');
+snap.addEventListener("click", function() {
+	context.drawImage(video, 0, 0, 640, 480);
+});
+</script>
+</html>
+
+
